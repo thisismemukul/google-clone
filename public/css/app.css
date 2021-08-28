@@ -62,6 +62,15 @@ li.nav-links a:hover {
     width: 40%;
 }
 
+@media (max-width: 600px) {
+    .google {
+        padding: 0 18px 0 18px;
+    }
+    .google #google_logo {
+        width: auto;
+    }
+}
+
 .form {
     text-align: center;
 }
