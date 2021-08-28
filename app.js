@@ -24,6 +24,24 @@ app.get("/", function(req, res) {
 
 });
 
+
+app.get("/search", function(req, res) {
+    // var api_key = "cbbde2093c7159a4cc2c9e483eccf03e";
+    // var query = req.query.search;
+    // request("http://api.serpstack.com/search?access_key=" + api_key + "&query=" + query, function(error, response, body) {
+    //     if (!error && response.statusCode == 200) {
+    //         const data = JSON.parse(body);
+    //         var check_req = data["request"]["success"]
+    //         if (check_req === true) {
+    //             res.render("search", { data: data });
+    //         } else {
+    //             console.log("Server Error")
+    //         }
+    //     }
+    // });
+    res.render("search");
+});
+
 app.get("*", function(req, res) {
     res.render("404");
 });
