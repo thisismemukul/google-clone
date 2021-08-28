@@ -1,0 +1,28 @@
+<h1>
+    Total Time Taken
+    <%= data["request"]["total_time_taken"] %>
+
+</h1>
+<h1>total_results
+    <%= data["search_information"]["total_results"] %>
+
+</h1>
+<h1>time_taken_displayed
+    <%= data["search_information"]["time_taken_displayed"] %>
+
+</h1>
+
+<h1>Search Results For:
+    <%= data["search_information"]["query_displayed"] %>
+
+</h1>
+
+<% data["organic_results"].forEach(function(data) { %>
+    <li>
+        <%= data.displayed_url %> -
+            <%= data.title %>
+    </li>
+    <li>
+        <%= data.url %>
+    </li>
+    <% }) %>
