@@ -1,28 +1,109 @@
-<h1>
-    Total Time Taken
-    <%= data["request"]["total_time_taken"] %>
+<%- include('partials/header') %>
+    <div id="header">
+        <div id="topbar">
+            <img id="searchbarimage" src="/img/logo.svg" />
+            <div id="searchbar" type="text">
+                <div class="form">
+                    <form action="/search" method="GET">
+                        <label for="form-search"></label>
+                        <input type="text" id="form-search" class="shadow-sm" placeholder="Search Google or type URL" name="search" value="<%= query %>">
+                        <button id="searchbarbutton" class="btn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <!-- <input id="searchbartext" type="text" class="shadow-sm" value="computer engineering mutex concept" name="search" /> -->
 
-</h1>
-<h1>total_results
-    <%= data["search_information"]["total_results"] %>
 
-</h1>
-<h1>time_taken_displayed
-    <%= data["search_information"]["time_taken_displayed"] %>
+            </div>
 
-</h1>
+            <ul id="nav_bar">
+                <li class="nav-links" id="gmail"><a href="#"><i class="fas fa-cog"></i></a></li>
+                <li id="sign_in"><a href="#">Sign In</a></li>
+            </ul>
+        </div>
 
-<h1>Search Results For:
-    <%= data["search_information"]["query_displayed"] %>
+        <div id="optionsbar">
+            <ul id="optionsmenu1">
+                <li id="optionsmenuactive"><i class="fas fa-search"></i> All</li>
+                <li><i class="far fa-newspaper"></i> News</li>
+                <li><i class="far fa-play-circle"></i> Videos</li>
+                <li><i class="far fa-image"></i> Images</li>
+                <li><i class="fas fa-map-marker-alt"></i> Maps</li>
+                <li><i class="fas fa-ellipsis-v"></i> More</li>
+            </ul>
 
-</h1>
+            <ul id="optionsmenu2">
+                <li>Tools</li>
+            </ul>
+        </div>
+    </div>
+    <div id="searchresultsarea">
+        <p id="searchresultsnumber">About
+            <%= data["search_information"]["total_results"] %> results (
+                <%= data["search_information"]["time_taken_displayed"] %> seconds)
+        </p>
 
-<% data["organic_results"].forEach(function(data) { %>
-    <li>
-        <%= data.displayed_url %> -
-            <%= data.title %>
-    </li>
-    <li>
-        <%= data.url %>
-    </li>
-    <% }) %>
+        <% data["organic_results"].forEach(function(data) { %>
+            <div class="searchresult">
+                <a class="text-light">
+                    <%= data.displayed_url %>
+                </a> <button>▼</button>
+                <a href="<%= data.url %>">
+                    <h2>
+                        <%= data.title %>
+                    </h2>
+                </a>
+                <p class="text-light">
+                    <%= data.snippet %>
+                        <p class="text-light">For the concept in logic and probability theory, see Mutual exclusivity. Two nodes, i and i + 1, being removed simultaneously</p>
+                        <p class="text-light">results in node i + 1 not being removed. In computer science, mutual exclusion is a property of concurrency control, which is instituted ...</p>
+            </div>
+            <% }) %>
+                <div class="relatedsearches">
+                    <h3>Searches related to computer engineering mutex concept</h3>
+                    <div class="relatedlists">
+                        <ul class="relatedleft">
+                            <li>what is <b>mutex</b> and semaphore</li>
+                            <li><b>mutex</b> lock c++</li>
+                            <li><b>mutex</b> java</li>
+                            <li><b>mutex</b> c++</li>
+                        </ul>
+                        <ul class="relatedright">
+                            <li><b>mutex</b> vs lock</li>
+                            <li><b>mutex</b> semaphore example</li>
+                            <li><b>mutex</b> and semaphore example in c</li>
+                            <li><b>mutex</b> c#</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pagebar">
+                    <ul class="pagelist">
+                        <li class="pagelistprevious">Previous</li>
+                        <li class="pagelistfirst">1</li>
+                        <li class="pagelistnumber">2</li>
+                        <li class="pagelistnumber">3</li>
+                        <li class="pagelistnumber">4</li>
+                        <li class="pagelistnumber">5</li>
+                        <li class="pagelistnumber">6</li>
+                        <li class="pagelistnumber">7</li>
+                        <li class="pagelistnumber">8</li>
+                        <li class="pagelistnumber">9</li>
+                        <li class="pagelistnumber">10</li>
+                        <li class="pagelistnext">Next</li>
+                    </ul>
+                </div>
+    </div>
+
+    <div id="footer">
+        <div id="footerlocation">
+            <p>Somewhere, Moon </p>
+            <p> - From your phone (Location History) - Use precise location - Learn more</p>
+        </div>
+
+        <ul id="footermenu">
+            <li>Help</li>
+            <li>Send feedback</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+        </ul>
+    </div>
