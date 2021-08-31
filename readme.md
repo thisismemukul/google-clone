@@ -1,6 +1,6 @@
 # Movie Search Node App using API
 <p align="center">
-<img src="https://github.com/thisismemukul/google-clone/blob/main/public/img/tut.gif" alt="Google search clone" title="Google clone show gif" width="500"/>
+<img src="https://github.com/thisismemukul/google-clone/blob/main/public/img/tutorial.gif" alt="Google search clone" title="Google clone show gif" width="500"/>
 </p>
 <h3> Website Link 🔗: https://backrub.herokuapp.com/</h3>
 User can Search any query just like google. Users can see the query results.
