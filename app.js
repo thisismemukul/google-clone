@@ -55,15 +55,14 @@ app.get("/", function(req, res) {
 //         }
 //     });
 // });
-
 app.get("/search", function(req, res) {
-    var api_key = "2BC477F58495465FBCB97043A36843A7";
+    var api_key = "e134a565a9549c82bd61d91ccdb506fdcfcd51941c2a6982d3becb3333bf9874";
     var query = req.query.search;
-    request("https://api.scaleserp.com/search?api_key=" + api_key + "&q=" + query + "&google_domain=google.co.in&location=Maharashtra,India&gl=in&hl=en", function(error, response, body) {
+    request("https://serpapi.com/search.json?engine=google&hl=en&q=" + query + "&api_key=" + api_key, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
-            var check_req = data["request_info"]["success"]
-            if (check_req === true) {
+            var check_req = data["search_metadata"]["status"]
+            if (check_req === "Success") {
                 res.render("search", { data: data, query: query });
             } else {
                 console.log("Server Error")

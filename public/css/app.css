@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -77,6 +83,10 @@ li.nav-links a:hover {
     }
     .google #google_logo {
         width: auto;
+    }
+    .card-title-videos {
+        font-size: 12px;
+        padding: 2px;
     }
 }
 
@@ -234,6 +244,7 @@ footer ul a:hover {
     align-items: flex-end;
     position: fixed;
     background-color: #202124;
+    z-index: 999;
 }
 
 #searchbarimage {
@@ -338,7 +349,6 @@ footer ul a:hover {
 }
 
 #searchresultsarea {
-    margin-left: 150px;
     font-family: 'Arial';
 }
 
@@ -418,7 +428,6 @@ footer ul a:hover {
 }
 
 .searchresult p {
-    width: 625px;
     font-size: 13px;
     margin-top: 0px;
     color: rgb(82, 82, 82);
