@@ -140,7 +140,7 @@ li.nav-links a:hover {
 
 footer {
     background: #171717;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     padding: 10px 0 0 0;
     width: 100%;
