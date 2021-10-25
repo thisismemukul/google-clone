@@ -1,4 +1,4 @@
-# Movie Search Node App using API
+# Google Clone Node App using API
 <p align="center">
 <img src="https://github.com/thisismemukul/google-clone/blob/main/public/img/tutorial.gif" alt="Google search clone" title="Google clone show gif" width="500"/>
 </p>
